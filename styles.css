@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+	font-family: Arial, sans-serif;
+}
+
+#start-screen, #game-container, #game-over {
+    text-align: center;
+    color: white;
+}
+
+/* Game Title Styles */
+#game-title {
+    font-size: 48px; /* Large size for prominence */
+    font-weight: bold; /* Bold for emphasis */
+    color: #ffd700; /* Gold color for high contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for a crispy effect */
+    margin-bottom: 20px; /* Space between title and input */
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    width: 400px;
+    height: 400px;
+    gap: 1px;
+    background-color: #ccc;
+    margin: 0 auto;
+}
+
+.cell {
+    background-color: #fff;
+}
+
+.cell.snake {
+    background-color: green;
+}
+
+.cell.food {
+    background-color: red;
+}
+
+#current-score, #final-score {
+    font-size: 24px;
+    margin: 10px;
+}
+
+#controls {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+#scores-list {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #game-title {
+        font-size: 36px; /* Smaller size on mobile */
+    }
+}
